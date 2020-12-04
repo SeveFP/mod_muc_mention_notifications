@@ -22,7 +22,7 @@ local function is_eligible(user_bare_jid, room)
 	if notify_unaffiliated_users then return true; end
 
 	local user_rooms, err = get_user_rooms(user_bare_jid);
-	if not user_bare_jid then
+	if not user_rooms then
 		if err then
 			return false, err;
 		end
