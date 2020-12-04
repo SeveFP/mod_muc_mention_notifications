@@ -1,7 +1,3 @@
-## Requirements
-
-This module currently depends on mod_muc_markers, so review the requirements for that module.
-
 # Configuring
 
 ## Enabling
@@ -19,7 +15,7 @@ modules_enabled = {
 
 |Name |Description |Default |
 |-----|------------|--------|
-|muc_mentions_max_subscribers| Maximum number of active subscriptions allowed | 1024 |
+|muc_rmn_notify_unaffiliated_users| Notify mentioned users even if they are not members of the room they were mentioned in | false |
 
 # Usage
 Clients can start receiving room mention notifications by sending a presence stanza including `<mentions>` element to the MUC service:
