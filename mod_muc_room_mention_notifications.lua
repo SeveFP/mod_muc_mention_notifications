@@ -2,7 +2,6 @@ local jid = require "util.jid";
 local st = require "util.stanza";
 local datetime = require "util.datetime";
 
-
 local notify_unaffiliated_users = module:get_option("muc_rmn_notify_unaffiliated_users", false)
 
 local muc_affiliation_store = module:open_store("config", "map");
