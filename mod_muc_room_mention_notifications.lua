@@ -77,7 +77,7 @@ end
 module:hook("muc-broadcast-message", function (event)
 	local room, stanza = event.room, event.stanza;
 	local body = stanza:get_child_text("body")
-    if not body or #body < 1 then return; end
+	if not body or #body < 1 then return; end
 	local correction = stanza:get_child("replace", "urn:xmpp:message-correct:0");
 	if correction then return; end -- Do not notify on message corrections
 
